@@ -16,16 +16,33 @@ Please see the <a href="http://dkhunt27.github.io/simpleJSValidator/#!/api/Simpl
 
 # Usage
 
-	var sjv = require('simple-js-validator');
-    var someVar;
-    if (sjv.isDefined(someVar)) {
-        // do something 
-    }
-        	
-    if (sjv.isEmpty(someVar)) {
-        // do something else
-    }
-	
+	  var shu = require('simple-http-utilities');
+	  
+		var buildInputs = {
+			host: "someHost",
+			port: 443,
+			path: "/some/path"
+		};
+	  var options = shu.buildOptions(buildInputs);
+	  
+		var getInputs = {
+			useHttps: true,
+			options: options
+		};
+        
+		shu.get(getInputs, function (err, results) {
+			if (err) {
+				// error handling
+			}
+			
+			var statusCode = results.statusCode;
+			var response = results.response;
+			
+			// response handling
+			
+		});
+		
+		
 # Road Map
 <table>
 	<tr>

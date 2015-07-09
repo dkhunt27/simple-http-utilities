@@ -65,16 +65,11 @@ describe('simple.http.utilities.Unit.Tests.js', function(){
       });
       describe('when called', function () {
         beforeEach(function (done) {
-          toBeTested[functionToTest](fnInputs).then(
-            function (results) {
-              resultsReturned = results;
-              errReturned = null;
-            },
-            function (err) {
-              resultsReturned = null;
-              errReturned = err;
-            }
-          ).done(done);
+          toBeTested[functionToTest](fnInputs, function(err, results) {
+            resultsReturned = results;
+            errReturned = err;
+            done();
+          });
         });
 
         it('should return expected results', function () {
@@ -89,16 +84,11 @@ describe('simple.http.utilities.Unit.Tests.js', function(){
       });
       describe('when called', function () {
         beforeEach(function (done) {
-          toBeTested[functionToTest](fnInputs).then(
-            function (results) {
-              resultsReturned = results;
-              errReturned = null;
-            },
-            function (err) {
-              resultsReturned = null;
-              errReturned = err;
-            }
-          ).done(done);
+          toBeTested[functionToTest](fnInputs, function(err, results) {
+            resultsReturned = results;
+            errReturned = err;
+            done();
+          });
         });
 
         it('should return expected results', function () {
@@ -123,16 +113,11 @@ describe('simple.http.utilities.Unit.Tests.js', function(){
       });
       describe('when called', function () {
         beforeEach(function (done) {
-          toBeTested[functionToTest](fnInputs).then(
-            function (results) {
-              resultsReturned = results;
-              errReturned = null;
-            },
-            function (err) {
-              resultsReturned = null;
-              errReturned = err;
-            }
-          ).done(done);
+          toBeTested[functionToTest](fnInputs, function(err, results) {
+            resultsReturned = results;
+            errReturned = err;
+            done();
+          });
         });
 
         it('should return expected results', function () {
@@ -158,16 +143,11 @@ describe('simple.http.utilities.Unit.Tests.js', function(){
       });
       describe('when called', function () {
         beforeEach(function (done) {
-          toBeTested[functionToTest](fnInputs).then(
-            function (results) {
-              resultsReturned = results;
-              errReturned = null;
-            },
-            function (err) {
-              resultsReturned = null;
-              errReturned = err;
-            }
-          ).done(done);
+          toBeTested[functionToTest](fnInputs, function(err, results) {
+            resultsReturned = results;
+            errReturned = err;
+            done();
+          });
         });
 
         it('should return expected results', function () {
@@ -195,16 +175,11 @@ describe('simple.http.utilities.Unit.Tests.js', function(){
       });
       describe('when called', function () {
         beforeEach(function (done) {
-          toBeTested[functionToTest](fnInputs).then(
-            function (results) {
-              resultsReturned = results;
-              errReturned = null;
-            },
-            function (err) {
-              resultsReturned = null;
-              errReturned = err;
-            }
-          ).done(done);
+          toBeTested[functionToTest](fnInputs, function(err, results) {
+            resultsReturned = results;
+            errReturned = err;
+            done();
+          });
         });
 
         it('should return expected results', function () {
@@ -233,16 +208,11 @@ describe('simple.http.utilities.Unit.Tests.js', function(){
       });
       describe('when called', function () {
         beforeEach(function (done) {
-          toBeTested[functionToTest](fnInputs).then(
-            function (results) {
-              resultsReturned = results;
-              errReturned = null;
-            },
-            function (err) {
-              resultsReturned = null;
-              errReturned = err;
-            }
-          ).done(done);
+          toBeTested[functionToTest](fnInputs, function(err, results) {
+            resultsReturned = results;
+            errReturned = err;
+            done();
+          });
         });
 
         it('should return expected results', function () {
@@ -271,16 +241,11 @@ describe('simple.http.utilities.Unit.Tests.js', function(){
       });
       describe('when called', function () {
         beforeEach(function (done) {
-          toBeTested[functionToTest](fnInputs).then(
-            function (results) {
-              resultsReturned = results;
-              errReturned = null;
-            },
-            function (err) {
-              resultsReturned = null;
-              errReturned = err;
-            }
-          ).done(done);
+          toBeTested[functionToTest](fnInputs, function(err, results) {
+            resultsReturned = results;
+            errReturned = err;
+            done();
+          });
         });
 
         it('should return expected results', function () {
@@ -296,136 +261,6 @@ describe('simple.http.utilities.Unit.Tests.js', function(){
           expect(resultsReturned.headers, "resultsReturned.headers").to.exist;
           expect(resultsReturned.headers, "resultsReturned.headers").to.deep.equal({"Authorization": "Basic dW5kZWZpbmVkOnNvbWVQYXNzd29yZA==", "Content-Type": "someContentType"});
 
-        });
-      });
-    });
-  });
-
-  describe.skip('#get()', function () {
-    var functionToTest = "get";
-    var fnInputs;
-    beforeEach(function () {
-    });
-    describe('given minimal inputs,', function () {
-      beforeEach(function () {
-        var fsExistsSyncMock = function (dir) {
-          if (dir.indexOf("/some/path") === 0) {
-            return true;
-          } else {
-            return false;
-          }
-        };
-
-        var fsMkdirSyncMock = function () {
-          return true;
-        };
-
-        sinoned.existsSync = sinon.stub(fs, 'existsSync', fsExistsSyncMock);
-        sinoned.mkdirSync = sinon.stub(fs, 'mkdirSync', fsMkdirSyncMock);
-
-        fnInputs = fnInputsBuilder(functionToTest);
-      });
-      describe('when called', function () {
-        beforeEach(function (done) {
-          toBeTested[functionToTest](fnInputs).then(
-            function (results) {
-              resultsReturned = results;
-              errReturned = null;
-            },
-            function (err) {
-              resultsReturned = null;
-              errReturned = err;
-            }
-          ).done(done);
-        });
-
-        it('should call expected functions', function () {
-          shouldReturnResultsNoError(errReturned, resultsReturned);
-
-          expect(sinoned.existsSync.callCount, "sinoned.existsSync.callCount").to.equal(3);
-          expect(sinoned.mkdirSync.callCount, "sinoned.mkdirSync.callCount").to.equal(0);
-        });
-      });
-    });
-    describe('given root folder exists,', function () {
-      beforeEach(function () {
-        var fsExistsSyncMock = function (dir) {
-          if (dir === "/some/path") {
-            return true;
-          } else {
-            return false;
-          }
-        };
-
-        var fsMkdirSyncMock = function () {
-          return true;
-        };
-
-        sinoned.existsSync = sinon.stub(fs, 'existsSync', fsExistsSyncMock);
-        sinoned.mkdirSync = sinon.stub(fs, 'mkdirSync', fsMkdirSyncMock);
-
-        fnInputs = fnInputsBuilder(functionToTest);
-      });
-      describe('when called', function () {
-        beforeEach(function (done) {
-          toBeTested[functionToTest](fnInputs).then(
-            function (results) {
-              resultsReturned = results;
-              errReturned = null;
-            },
-            function (err) {
-              resultsReturned = null;
-              errReturned = err;
-            }
-          ).done(done);
-        });
-
-        it('should call expected functions', function () {
-          shouldReturnResultsNoError(errReturned, resultsReturned);
-
-          expect(sinoned.existsSync.callCount, "sinoned.existsSync.callCount").to.equal(3);
-          expect(sinoned.mkdirSync.callCount, "sinoned.mkdirSync.callCount").to.equal(2);
-        });
-      });
-    });
-    describe('given no folders exists,', function () {
-      beforeEach(function () {
-        var fsExistsSyncMock = function (dir) {
-          if (dir.indexOf("/some/path") === 0) {
-            return false;
-          } else {
-            return true;
-          }
-        };
-
-        var fsMkdirSyncMock = function () {
-          return true;
-        };
-
-        sinoned.existsSync = sinon.stub(fs, 'existsSync', fsExistsSyncMock);
-        sinoned.mkdirSync = sinon.stub(fs, 'mkdirSync', fsMkdirSyncMock);
-
-        fnInputs = fnInputsBuilder(functionToTest);
-      });
-      describe('when called', function () {
-        beforeEach(function (done) {
-          toBeTested[functionToTest](fnInputs).then(
-            function (results) {
-              resultsReturned = results;
-              errReturned = null;
-            },
-            function (err) {
-              resultsReturned = null;
-              errReturned = err;
-            }
-          ).done(done);
-        });
-
-        it('should call expected functions', function () {
-          shouldReturnResultsNoError(errReturned, resultsReturned);
-
-          expect(sinoned.existsSync.callCount, "sinoned.existsSync.callCount").to.equal(3);
-          expect(sinoned.mkdirSync.callCount, "sinoned.mkdirSync.callCount").to.equal(3);
         });
       });
     });

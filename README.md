@@ -12,7 +12,7 @@ Please see the <a href="http://dkhunt27.github.io/simpleJSValidator/#!/api/Simpl
 
 # Installation
 
-	npm install simple-js-validator
+	npm install simple-http-utilities
 
 # Usage
 

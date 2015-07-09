@@ -1,0 +1,13 @@
+[
+    {
+        "name":"SimpleHttpUtilities",
+        "groups": [
+            {
+                "name":"Classes",
+                "classes":[
+                    "Simple.Http.Utilities"
+                ]
+            }
+        ]
+    }
+]

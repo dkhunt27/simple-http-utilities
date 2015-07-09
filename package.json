@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "0.2.1",
   "name": "simple-http-utilities",
   "description": "Perform simple http calls like get, post, or put. A wrapper for base http library.",
   "author": "Dan Hunt <dkhunt27@gmail.com>",

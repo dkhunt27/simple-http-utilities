@@ -54,6 +54,8 @@ describe('simple.http.utilities.Unit.Tests.js', function(){
     var functionToTest = "buildOptions";
     var fnInputs;
     beforeEach(function () {
+      resultsReturned = null;
+      errReturned = null;
     });
     describe('given missing minimal inputs,', function () {
       beforeEach(function () {
@@ -65,11 +67,13 @@ describe('simple.http.utilities.Unit.Tests.js', function(){
       });
       describe('when called', function () {
         beforeEach(function (done) {
-          toBeTested[functionToTest](fnInputs, function(err, results) {
-            resultsReturned = results;
+          try {
+            resultsReturned = toBeTested[functionToTest](fnInputs);
+            done();
+          } catch (err) {
             errReturned = err;
             done();
-          });
+          }
         });
 
         it('should return expected results', function () {
@@ -84,11 +88,13 @@ describe('simple.http.utilities.Unit.Tests.js', function(){
       });
       describe('when called', function () {
         beforeEach(function (done) {
-          toBeTested[functionToTest](fnInputs, function(err, results) {
-            resultsReturned = results;
+          try {
+            resultsReturned = toBeTested[functionToTest](fnInputs);
+            done();
+          } catch (err) {
             errReturned = err;
             done();
-          });
+          }
         });
 
         it('should return expected results', function () {
@@ -113,11 +119,13 @@ describe('simple.http.utilities.Unit.Tests.js', function(){
       });
       describe('when called', function () {
         beforeEach(function (done) {
-          toBeTested[functionToTest](fnInputs, function(err, results) {
-            resultsReturned = results;
+          try {
+            resultsReturned = toBeTested[functionToTest](fnInputs);
+            done();
+          } catch (err) {
             errReturned = err;
             done();
-          });
+          }
         });
 
         it('should return expected results', function () {
@@ -143,11 +151,13 @@ describe('simple.http.utilities.Unit.Tests.js', function(){
       });
       describe('when called', function () {
         beforeEach(function (done) {
-          toBeTested[functionToTest](fnInputs, function(err, results) {
-            resultsReturned = results;
+          try {
+            resultsReturned = toBeTested[functionToTest](fnInputs);
+            done();
+          } catch (err) {
             errReturned = err;
             done();
-          });
+          }
         });
 
         it('should return expected results', function () {
@@ -175,11 +185,13 @@ describe('simple.http.utilities.Unit.Tests.js', function(){
       });
       describe('when called', function () {
         beforeEach(function (done) {
-          toBeTested[functionToTest](fnInputs, function(err, results) {
-            resultsReturned = results;
+          try {
+            resultsReturned = toBeTested[functionToTest](fnInputs);
+            done();
+          } catch (err) {
             errReturned = err;
             done();
-          });
+          }
         });
 
         it('should return expected results', function () {
@@ -208,11 +220,13 @@ describe('simple.http.utilities.Unit.Tests.js', function(){
       });
       describe('when called', function () {
         beforeEach(function (done) {
-          toBeTested[functionToTest](fnInputs, function(err, results) {
-            resultsReturned = results;
+          try {
+            resultsReturned = toBeTested[functionToTest](fnInputs);
+            done();
+          } catch (err) {
             errReturned = err;
             done();
-          });
+          }
         });
 
         it('should return expected results', function () {
@@ -241,11 +255,13 @@ describe('simple.http.utilities.Unit.Tests.js', function(){
       });
       describe('when called', function () {
         beforeEach(function (done) {
-          toBeTested[functionToTest](fnInputs, function(err, results) {
-            resultsReturned = results;
+          try {
+            resultsReturned = toBeTested[functionToTest](fnInputs);
+            done();
+          } catch (err) {
             errReturned = err;
             done();
-          });
+          }
         });
 
         it('should return expected results', function () {

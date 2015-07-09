@@ -88,7 +88,7 @@ Please see the <a href="http://dkhunt27.github.io/simpleJSValidator/#!/api/Simpl
 # Release History
 <table>
 	<tr>
-		<td>0.1.0</td>
+		<td>0.2.1</td>
 		<td>2015/07/09</td>
 		<td>Initial Release.</td>
 	</tr>
@@ -100,7 +100,7 @@ Please see the <a href="http://dkhunt27.github.io/simpleJSValidator/#!/api/Simpl
 	<tr>
 		<td></td>
 		<td></td>
-		<td>No test coverage.</td>
+		<td>Little test coverage.</td>
 	</tr>
 	<tr>
 		<td></td>
